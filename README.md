@@ -6,9 +6,13 @@
 - User can enter tv show or movie description to predict that description’s rating & OMDB genre. [Machine Learning](#machine-learning)
 >- This application can help you optimize the description you supply Netflix to ensure the person picks the expected genre & movie rating of your movie or tv show.
 >- Underlying Database provides a way to explore/analyze the Netflix shows and movies by genre and rating to find something to watch on Netflix.  Data manipulated through ML to identify similar content by matching text-based features. [Data Sources](#data-sources)
-- [Team Members](#team-members)
-- [Team Members](#team-members)
-- [Technologies Used](#technologies-used)
+- Other section links:
+>- [Flask](#flask)
+>- [Heroku Deployment](#heroku-deployment)
+>- [ETL](#Data-Extract-Transform-Load-(ETL))
+>- [Other Data Analysis](#Other Data Analysis)
+>- [Team Members](#team-members)
+>- [Technologies Used](#technologies-used)
 
 ## **Application Diagram**
 ![Database Model](static/images/Database_Model.png)    **STILL NEED TO ADD database model**
@@ -17,13 +21,13 @@
 - Machine Learning (ML) library used = OneVsRestClassifier (sklearn.multiclass)
 - TV Show or Movie Description is input to predict one of
 >>- 28 OMDB genre (The most common genre is Drama, which causes our predictions to be a bit unbalanced):
->> ![genre_on_omdb](static/image/genre_on_omdb.png) 
+>> ![genres_on_omdb](static/image/genre_on_omdb.png) 
 >>- Grouped to 5 ratings = G, PG, PG-13, R, NC-17:
 >>>- Grouped to G: ‘TV-Y7’ , ’TV-G’ , ’TV-Y’ , ’TV-Y7-FV’
 >>>- Grouped to R: 'TV-MA’ & 'R'
 >> ![shows_movies_rating](static/image/shows_movies_rating.png) 
 - Common Description Words:  Finding the right words to train your machine on is key. 
->> ![word_count](static/image/cord_count.png)
+>> ![word_count](static/image/word_count.png)
 >> ![wordcloud_description](static/image/wordcloud_description.png)
 >- Picking valuable words like "young" will give more desirable results rather than "the"
 >- Library nltk.corpus used to remove ‘standard’ stopwords (top words removed = a, the, to, and)
@@ -34,9 +38,9 @@
 - Predictive Accuracy for ratings = 35.2% 
 
 ## **Flask**
->- Saved machine learning (ML) model & referenced in Flask using Pickle (.pkl)
->- Used Pandas to merge datbase tables as needed to pull data from Postgresql database
->- FireFox application utilized to develop API in order to render the data to the HTML
+- Saved machine learning (ML) model & referenced in Flask using Pickle (.pkl)
+- Used Pandas to merge datbase tables as needed to pull data from Postgresql database
+- FireFox application utilized to develop API in order to render the data to the HTML
 
 ## **Heroku Deployment**
 - Use rquirements text file to load only the python libraries used in the app (ie make sure included Pickle)
@@ -87,24 +91,24 @@
 >- **Melanie Nolker** [mnolker](https://github.com/mnolker) - Responsibility: Database ETL & project documentation
 
 ## **Technologies Used**
->-flask
->-flask_cors
->-matplotlib
->-models
->-nltk
->-numpy
->-wordcloud
->-os
->-pandas
->-pickle
->-pprint
->-psycopg2
->-re
->-seaborn
->-sklearn
->-sqlalchemy
->-tqdm
->-typing
->-bootstrap
->-jquery
->-js.d3
+>>-flask
+>>-flask_cors
+>>-matplotlib
+>>-models
+>>-nltk
+>>-numpy
+>>-wordcloud
+>>-os
+>>-pandas
+>>-pickle
+>>-pprint
+>>-psycopg2
+>>-re
+>>-seaborn
+>>-sklearn
+>>-sqlalchemy
+>>-tqdm
+>>-typing
+>>-bootstrap
+>>-jquery
+>>-js.d3
