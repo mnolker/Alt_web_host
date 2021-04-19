@@ -54,12 +54,13 @@
 - The database schema is shown below in the image. We used the main merged "Title" table and then had a OMDB_genre and netflix_genre table along with their junction tables. 
 - ![Database Schema](resources/database_schema.png)
 - The database and tables were initially set up in PostgreSQL, a relational database, since our data was consistent and so we were able to relate tables to make it easier to query.
-- The Transform_Load.ipynb file loads the table data into the tables in PostgreSQL.
+- The Transform_Load.ipynb file loads the table data into the tables into PostgreSQL
+- PostgreSQL was then connected to AWS RDS (for deployement beyond local host).
 
 ## **Team Members**
 >- **April Lagnevall** [alagnevall](https://github.com/alagnevall)  - Responsibility: HTML/CSS build, Genre predict ML model, js and D3 build to enable ML model in app
 >- **Haifa Najdawi** [HaifaNajdawi](https://github.com/HaifaNajdawi)  - Responsibility: Data visualizations & analysis, Machine Learning, API build, AWS RDS set up, and Heroku Deployment
->- **Julia Headlee**  [julieheadlee](https://github.com/julieheadlee) Responsibility: Flask, , Ratings predict ML model, js and D3 build to enable ML model in app
+>- **Julia Headlee**  [julieheadlee](https://github.com/julieheadlee) Responsibility: Flask, Ratings predict ML model, js and D3 build to enable ML model in app
 >- **Melanie Nolker** [mnolker](https://github.com/mnolker) - Responsibility: Database ETL & project documentation
 
 ## **Technologies Used**
@@ -69,6 +70,7 @@
 >-models
 >-nltk
 >-numpy
+>-wordcloud
 >-os
 >-pandas
 >-pickle
