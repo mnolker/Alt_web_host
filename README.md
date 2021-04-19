@@ -10,7 +10,7 @@
 >- [Flask](#flask)
 >- [Heroku Deployment](#heroku-deployment)
 >- [ETL](#Data-Extract-Transform-Load-(ETL))
->- [Other Data Analysis](#Other Data Analysis)
+>- [Other Data Analysis](#Other-Data-Analysis)
 >- [Team Members](#team-members)
 >- [Technologies Used](#technologies-used)
 
@@ -21,7 +21,7 @@
 - Machine Learning (ML) library used = OneVsRestClassifier (sklearn.multiclass)
 - TV Show or Movie Description is input to predict one of
 >>- 28 OMDB genre (The most common genre is Drama, which causes our predictions to be a bit unbalanced):
->> ![genres_on_omdb](static/image/genre_on_omdb.png) 
+>> ![genres_on_omdb](static/image/genres_on_omdb.png) 
 >>- Grouped to 5 ratings = G, PG, PG-13, R, NC-17:
 >>>- Grouped to G: ‘TV-Y7’ , ’TV-G’ , ’TV-Y’ , ’TV-Y7-FV’
 >>>- Grouped to R: 'TV-MA’ & 'R'
