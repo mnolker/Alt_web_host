@@ -27,8 +27,8 @@
 >>>- Grouped to R: 'TV-MA’ & 'R'
 >> ![shows_movies_rating](static/image/shows_movies_rating.png) 
 - Common Description Words:  Finding the right words to train your machine on is key. 
->> ![word_count](static/image/word_count.png)
 >> ![wordcloud_description](static/image/wordcloud_description.png)
+>> ![word_count](static/image/word_count.png)
 >- Picking valuable words like "young" will give more desirable results rather than "the"
 >- Library nltk.corpus used to remove ‘standard’ stopwords (top words removed = a, the, to, and)
 >> ![stop_words](static/image/stop_words.png) 
