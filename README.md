@@ -12,7 +12,7 @@
 ![Database Model](static/images/Database_Model.png)    **STILL NEED TO ADD database model**
 
 ## **Machine Learning**
-- ML library used = OneVsRestClassifier (sklearn.multiclass)
+- Machine Learning (ML) library used = OneVsRestClassifier (sklearn.multiclass)
 - TV Show or Movie Description is input to predict one of 28 OMDB genre & the rating
 - Common Description Words:  Finding the right words to train your machine on is key. 
 >- Picking valuable words like "young" will give more desirable results rather than "the"
@@ -20,6 +20,18 @@
 - trained genre on 99% of the data & ratings on 88% of the data; train %s high due to limited records
 - Saved model to refrence model through Flask using Pickle
 - Predictive Accuracy for genre
+
+## **Flask**
+>- Saved machine learning (ML) model & referenced in Flask using Pickle
+>- Used Pandas to merge datbase tables as needed to pull data from Postgresql database
+>- FireFox application utilized to develop API in order to render the data to the HTML
+
+## **Heroku Deployment**
+>- Use rquirements text file to load only the python libraries needed
+>- limited to 10,000 records for Heroku database, used AWS RDS for database server
+>- Add config with user name & password in Heroku & create variable to reference in app.py Flask to keep senstive information masked
+>- other text here
+>- other text here
 
 ## **Data Sources**
 - Database
