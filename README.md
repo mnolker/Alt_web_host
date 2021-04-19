@@ -101,24 +101,24 @@
 >- **Melanie Nolker** [mnolker](https://github.com/mnolker) - Responsibility: Database ETL & project documentation
 
 ## **Technologies Used**
->>-flask
->>-flask_cors
->>-matplotlib
->>-models
->>-nltk
->>-numpy
->>-wordcloud
->>-os
->>-pandas
->>-pickle
->>-pprint
->>-psycopg2
->>-re
->>-seaborn
->>-sklearn
->>-sqlalchemy
->>-tqdm
->>-typing
->>-bootstrap
->>-jquery
->>-js.d3
+-flask
+-flask_cors
+-matplotlib
+-models
+-nltk
+-numpy
+-wordcloud
+-os
+-pandas
+-pickle
+-pprint
+-psycopg2
+-re
+-seaborn
+-sklearn
+-sqlalchemy
+-tqdm
+-typing
+-bootstrap
+-jquery
+-js.d3
