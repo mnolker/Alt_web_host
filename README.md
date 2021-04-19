@@ -7,8 +7,10 @@
 >- This application can help you optimize the description you supply Netflix to ensure the person picks the expected genre & movie rating of your movie or tv show.
 >- Underlying Database provides a way to explore/analyze the Netflix shows and movies by genre and rating to find something to watch on Netflix.  Data manipulated through ML to identify similar content by matching text-based features. [Data Sources](#data-sources)
 - [Team Members](#team-members)
+- [Team Members](#team-members)
 - [Technologies Used](#technologies-used)
 
+## **Application Diagram**
 ![Database Model](static/images/Database_Model.png)    **STILL NEED TO ADD database model**
 
 ## **Machine Learning**
@@ -17,37 +19,33 @@
 - Common Description Words:  Finding the right words to train your machine on is key. 
 >- Picking valuable words like "young" will give more desirable results rather than "the"
 >- Library nltk.corpus used to remove ‘standard’ stopwords (top words removed = a, the, to, and)
+>> ![stop_words](static/image/stop_words.png) 
 - trained genre on 99% of the data & ratings on 88% of the data; train %s high due to limited records
 - Saved model to refrence model through Flask using Pickle
-- Predictive Accuracy for genre
+- Predictive Accuracy for genre = 43.5%
+- Predictive Accuracy for ratings = 35.2% 
 
 ## **Flask**
->- Saved machine learning (ML) model & referenced in Flask using Pickle
+>- Saved machine learning (ML) model & referenced in Flask using Pickle (.pkl)
 >- Used Pandas to merge datbase tables as needed to pull data from Postgresql database
 >- FireFox application utilized to develop API in order to render the data to the HTML
 
 ## **Heroku Deployment**
->- Use rquirements text file to load only the python libraries needed
->- limited to 10,000 records for Heroku database, used AWS RDS for database server
->- Add config with user name & password in Heroku & create variable to reference in app.py Flask to keep senstive information masked
->- other text here
->- other text here
+- Use rquirements text file to load only the python libraries used in the app (ie make sure included Pickle)
+- Limited to 10,000 records for Heroku database, used AWS RDS for database server
+- Add config with user name & password in Heroku & create variable to reference in app.py Flask to keep senstive information masked
+- Deploy using Gethub master branch
+- Include 'Procfile' in repository to connect to Heroku app (web: gunicorn app:app)
+- Deployed site address: https://the-big-chill.herokuapp.com/
 
-## **Data Sources**
-- Database
->- Public Domain Netflix Movies and TV Shows csv file from Kaggle: https://www.kaggle.com/shivamb/netflix-shows (This dataset consists of tv shows and movies available on Netflix as of 2019)
->- OMDB API http://www.omdbapi.com/
-- Other
->- Netflix Research data: https://www.businessofapps.com/data/netflix-statistics/
+## **Data Analysis**
+>>- ![movies_vs_shows](static/image/movies_vs_shows.png) 
 
-## **Data Cleanup and Analysis (ETL)**
+## **Data Extract Transform Load (ETL)**
 ### ETL Summary
 - Extract - We will be using two datasets. We are using a Netflix Movies and TV Shows csv file from Kaggle and using the OMDB API (OMDBAPI.com).
 - Transform -  We will pull from the OMDB API titles, ratings, genres, etc. and using the csv netflix file, denoting if the title is in Netflix.
 - Load - We will create the database in postgreSQL
-- Data Analysis
-
-![Database Model](static/image/Database_Model.png) 
 
 ### **E**xtract
 - From the OMDB source we cleaned the "NA" string to blank
@@ -64,7 +62,7 @@
 
 ### **L**oad
 - The database schema is shown below in the image. We used the main merged "Title" table and then had a OMDB_genre and netflix_genre table along with their junction tables. 
-- ![Database Schema](static/image/database_schema.png)
+>> ![Database Schema](static/image/database_schema.png)
 - The database and tables were initially set up in PostgreSQL, a relational database, since our data was consistent and so we were able to relate tables to make it easier to query.
 - The Transform_Load.ipynb file loads the table data into the tables into PostgreSQL
 - PostgreSQL was then connected to AWS RDS (for deployement beyond local host).
