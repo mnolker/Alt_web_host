@@ -52,7 +52,7 @@
 
 ### **L**oad
 - The database schema is shown below in the image. We used the main merged "Title" table and then had a OMDB_genre and netflix_genre table along with their junction tables. 
-- ![Database Schema](static/image/database_schema.png)
+- ![Database Schema](../static/image/database_schema.png)
 - The database and tables were initially set up in PostgreSQL, a relational database, since our data was consistent and so we were able to relate tables to make it easier to query.
 - The Transform_Load.ipynb file loads the table data into the tables into PostgreSQL
 - PostgreSQL was then connected to AWS RDS (for deployement beyond local host).
