@@ -15,8 +15,16 @@
 
 ## **Machine Learning**
 - Machine Learning (ML) library used = OneVsRestClassifier (sklearn.multiclass)
-- TV Show or Movie Description is input to predict one of 28 OMDB genre & the rating
+- TV Show or Movie Description is input to predict one of
+>>- 28 OMDB genre (The most common genre is Drama, which causes our predictions to be a bit unbalanced):
+>> ![genre_on_omdb](static/image/genre_on_omdb.png) 
+>>- Grouped to 5 ratings = G, PG, PG-13, R, NC-17:
+>>>- Grouped to G: ‘TV-Y7’ , ’TV-G’ , ’TV-Y’ , ’TV-Y7-FV’
+>>>- Grouped to R: 'TV-MA’ & 'R'
+>> ![shows_movies_rating](static/image/shows_movies_rating.png) 
 - Common Description Words:  Finding the right words to train your machine on is key. 
+>> ![word_count](static/image/cord_count.png)
+>> ![wordcloud_description](static/image/wordcloud_description.png)
 >- Picking valuable words like "young" will give more desirable results rather than "the"
 >- Library nltk.corpus used to remove ‘standard’ stopwords (top words removed = a, the, to, and)
 >> ![stop_words](static/image/stop_words.png) 
@@ -38,8 +46,13 @@
 - Include 'Procfile' in repository to connect to Heroku app (web: gunicorn app:app)
 - Deployed site address: https://the-big-chill.herokuapp.com/
 
-## **Data Analysis**
->>- ![movies_vs_shows](static/image/movies_vs_shows.png) 
+## **Other Data Analysis**
+> ![movies_vs_shows](static/image/movies_vs_shows.png) 
+> ![movies_vs_shows_by_year](static/image/movies_vs_shows_by_year.png) 
+> ![actors_movies](static/image/actores_movies.png) 
+> ![actors_tv_shows](static/image/actors_tv_shows.png) 
+> ![top_directors](static/image/top_directors.png) 
+> ![top_listed_in](static/image/top_listed_in.png) 
 
 ## **Data Extract Transform Load (ETL)**
 ### ETL Summary
