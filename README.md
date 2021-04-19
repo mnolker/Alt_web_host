@@ -7,12 +7,12 @@
 >- This application can help you optimize the description you supply Netflix to ensure the person picks the expected genre & movie rating of your movie or tv show.
 >- Underlying Database provides a way to explore/analyze the Netflix shows and movies by genre and rating to find something to watch on Netflix.  Data manipulated through ML to identify similar content by matching text-based features. 
 
-- Table of Contents:
+- **Table of Contents:**
 >- [Machine Learning](#machine-learning)
 >- [Flask](#flask)
 >- [Heroku Deployment](#heroku-deployment)
 >- [Other Data Analysis](#Other-Data-Analysis)
->- [ETL](#Data-Extract-Transform-Load-(ETL))
+>- [Extract Transform Load (ETL)](#Data-Extract-Transform-Load-(ETL))
 >- [Data Sources](#data-sources)
 >- [Team Members](#team-members)
 >- [Technologies Used](#technologies-used)
