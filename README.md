@@ -3,14 +3,17 @@
 ## Project to apply Machine Learning (ML) to Netflix tv shows & movies
 **APPLICATION PURPOSE: Do you have a TV show or movie about to premier on Netflix!?!**  
 - The description of your tv show or movie is an important part of the information people are presented with when scrolling through the numerous options to select as they sit back to “Netflix & chill”.
-- User can enter tv show or movie description to predict that description’s rating & OMDB genre. [Machine Learning](#machine-learning)
+- User can enter tv show or movie description to predict that description’s rating & OMDB genre. 
 >- This application can help you optimize the description you supply Netflix to ensure the person picks the expected genre & movie rating of your movie or tv show.
->- Underlying Database provides a way to explore/analyze the Netflix shows and movies by genre and rating to find something to watch on Netflix.  Data manipulated through ML to identify similar content by matching text-based features. [Data Sources](#data-sources)
-- Other section links:
+>- Underlying Database provides a way to explore/analyze the Netflix shows and movies by genre and rating to find something to watch on Netflix.  Data manipulated through ML to identify similar content by matching text-based features. 
+
+- Table of Contents:
+>- [Machine Learning](#machine-learning)
 >- [Flask](#flask)
 >- [Heroku Deployment](#heroku-deployment)
->- [ETL](#Data-Extract-Transform-Load-(ETL))
 >- [Other Data Analysis](#Other-Data-Analysis)
+>- [ETL](#Data-Extract-Transform-Load-(ETL))
+>- [Data Sources](#data-sources)
 >- [Team Members](#team-members)
 >- [Technologies Used](#technologies-used)
 
@@ -55,7 +58,7 @@
 > ![movies_vs_shows_by_year](static/image/movies_vs_shows_by_year.png) 
 > ![actors_movies](static/image/actores_movies.png) 
 > ![actors_tv_shows](static/image/actors_tv_shows.png) 
-> ![top_directors](static/image/top_directors.png) 
+> ![top_directors](static/image/top_directores.png) 
 > ![top_listed_in](static/image/top_listed_in.png) 
 
 ## **Data Extract Transform Load (ETL)**
@@ -83,6 +86,13 @@
 - The database and tables were initially set up in PostgreSQL, a relational database, since our data was consistent and so we were able to relate tables to make it easier to query.
 - The Transform_Load.ipynb file loads the table data into the tables into PostgreSQL
 - PostgreSQL was then connected to AWS RDS (for deployement beyond local host).
+
+## **Data Sources**
+- Database
+>- Public Domain Netflix Movies and TV Shows csv file from Kaggle: https://www.kaggle.com/shivamb/netflix-shows (This dataset consists of tv shows and movies available on Netflix as of 2019)
+>- OMDB API http://www.omdbapi.com/
+- Other
+>- Netflix Research data: https://www.businessofapps.com/data/netflix-statistics/
 
 ## **Team Members**
 >- **April Lagnevall** [alagnevall](https://github.com/alagnevall)  - Responsibility: HTML/CSS build, Genre predict ML model, js and D3 build to enable ML model in app
